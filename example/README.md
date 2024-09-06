@@ -1,0 +1,1 @@
+This example generates rgbx image in runtime and converts it to yuv420p with pixfconv
