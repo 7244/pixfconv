@@ -20,8 +20,8 @@ if __name__ == '__main__':
   bgrx_array = (ctypes.c_char * (rx * ry * 4))()
   for x in range(rx):
     for y in range(ry):
-      bgrx_array[(y * rx + x) * 4 + 0] = int(x / 2)
-      bgrx_array[(y * rx + x) * 4 + 1] = int(y / 2)
+      bgrx_array[(y * rx + x) * 4 + 0] = int(x / 2) % 0x100
+      bgrx_array[(y * rx + x) * 4 + 1] = int(y / 2) % 0x100
       bgrx_array[(y * rx + x) * 4 + 2] = 0
       bgrx_array[(y * rx + x) * 4 + 3] = 0
 
