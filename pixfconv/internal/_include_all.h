@@ -1,6 +1,6 @@
 #pragma once
 
-#include <PIXF.h>
+#include <PIXF/PIXF.h>
 
 #include "BGRA.h"
 #include "RGB24.h"
