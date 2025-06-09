@@ -13,6 +13,7 @@ typedef bool (*_pixfconv_st_convert_func_t)(
 
 #include "internal/RGB24.h"
 #include "internal/BGRA.h"
+#include "internal/BGRX.h"
 #include "internal/YUV420P.h"
 
 _pixfconv_st_convert_func_t _pixfconv_st_getfmt(uint32_t sfmt, uint32_t dfmt){
@@ -22,6 +23,9 @@ _pixfconv_st_convert_func_t _pixfconv_st_getfmt(uint32_t sfmt, uint32_t dfmt){
     }
     case PIXF_BGRA:{
       return _pixfconv_st_BGRA_getfmt(dfmt);
+    }
+    case PIXF_BGRX:{
+      return _pixfconv_st_BGRX_getfmt(dfmt);
     }
     case PIXF_YUV420p:{
       return _pixfconv_st_YUV420P_getfmt(dfmt);
